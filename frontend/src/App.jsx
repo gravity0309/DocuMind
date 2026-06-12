@@ -6,7 +6,7 @@ import ChatWindow from './components/ChatWindow.jsx'
 import ChatInput from './components/ChatInput.jsx'
 import './App.css'
 
-const API_BASE_URL = 'http://127.0.0.1:8000'
+const API_URL = 'https://documind-production-8c7a.up.railway.app'
 const STORAGE_KEYS = {
   messages: 'documind_messages',
   uploaded: 'documind_uploaded',
@@ -140,7 +140,7 @@ function App() {
     setError('')
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/upload`, formData, {
+      const response = await axios.post(`${API_URL}/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -232,7 +232,7 @@ function App() {
     ])
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/ask`, {
+      const response = await axios.post(`${API_URL}/ask`, {
         session_id: sessionId,
         question: trimmedQuestion,
       })

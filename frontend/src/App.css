@@ -28,7 +28,7 @@
 
 body {
   min-width: 320px;
-  overflow: hidden;
+  overflow: auto;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);

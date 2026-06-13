@@ -120,7 +120,8 @@ Current question:
         }
     )
 
-    return {
+return {
         "answer": answer,
         "session_id": body.session_id,
-    }
+        "sources": [doc.page_content for doc in docs],
+    }   
